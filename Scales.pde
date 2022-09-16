@@ -9,7 +9,7 @@ void draw() {
 
   int waveLength = 120;
   int waveHeight = 20;
-  int repeats = height / waveHeight;
+  int repeats = 5; //height / waveHeight;
   for (int v = -1; v < repeats + 1; v++) {
     int y = v * waveHeight;
     float percent = (float) v / repeats;
