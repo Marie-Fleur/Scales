@@ -9,7 +9,7 @@ void draw() {
 
   int waveLength = 120;
   int waveHeight = 20;
-  int repeats = 5; //height / waveHeight;
+  int repeats = height / waveHeight;
   for (int v = -1; v < repeats + 1; v++) {
     int y = v * waveHeight;
     float percent = (float) v / repeats;
@@ -28,7 +28,9 @@ void scale(int x, int y, int waveLength, int waveHeight) {
       beginShape();
       vertex(x, y);
       bezierVertex(x + waveLength/3, y - waveHeight, x + waveLength*2/3, y + waveHeight, x + waveLength, y);
+      noStroke();
       vertex(x+waveLength,height);
       vertex(x,height);
+      Stroke();
       endShape();
  }
