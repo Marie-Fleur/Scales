@@ -27,12 +27,12 @@ void draw() {
 
 void scale(int x, int y, int waveLength, int waveHeight) {
       beginShape();
-      stroke(0,0,0);
+      noStroke();
       vertex(x, y);
       bezierVertex(x + waveLength/3, y - waveHeight, x + waveLength*2/3, y + waveHeight, x + waveLength, y);
-      noStroke();
       vertex(x+waveLength,height);
-      stroke(0, 0, 0);
       vertex(x,height);
       endShape();
+      stroke(0);
+      bezier(x, y, x + waveLength/3, y - waveHeight, x + waveLength*2/3, y + waveHeight, x + waveLength, y);
  }
