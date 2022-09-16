@@ -3,6 +3,7 @@ void setup() {
  size(500, 700);
  noLoop();
 }
+
 void draw() {
   color color1 = #7B68EE; // lavender
   color color2 = #7FFF00; // green
@@ -19,11 +20,12 @@ void draw() {
     color newColor = color(resultRed, resultGreen, resultBlue);
     fill(newColor);
     for (int h = 0; h < 6; h++) {
-    int x = h * waveLength;
-    scale(x, y, waveLength, waveHeight);
-      }
+      int x = h * waveLength;
+      scale(x, y, waveLength, waveHeight);
+    }  
   }
 }
+
 void scale(int x, int y, int waveLength, int waveHeight) {
       beginShape();
       vertex(x, y);
@@ -31,6 +33,5 @@ void scale(int x, int y, int waveLength, int waveHeight) {
       noStroke();
       vertex(x+waveLength,height);
       vertex(x,height);
-      Stroke();
       endShape();
  }
